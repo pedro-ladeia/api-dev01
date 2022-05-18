@@ -1,0 +1,25 @@
+package com.example.Dev01_Api.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "notas")
+public class NotaModel {
+
+	@Id
+	private Integer id;
+	@ManyToOne
+	@JoinColumn(name = "id_aluno")
+	private AlunoModel alunoModel;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_materia")
+	private MateriaModel materiaModel;
+	
+	@Column
+	private Double valor;
+}

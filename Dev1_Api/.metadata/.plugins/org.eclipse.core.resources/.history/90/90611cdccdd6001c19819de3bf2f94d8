@@ -1,0 +1,8 @@
+package com.example.Dev01_Api.models;
+
+public class UsuarioModel extends PessoaModel{
+	
+	private Integer matricula;
+	private String senha;
+	
+}
